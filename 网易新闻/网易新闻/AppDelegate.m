@@ -20,7 +20,13 @@
     
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
-    _window.rootViewController = [[UIViewController alloc]init];
+    
+
+    Class cls = NSClassFromString(@"WYNewsListViewController");
+    UIViewController *vc = [cls new];
+    
+    _window.rootViewController = vc;
+
     [_window makeKeyAndVisible];
         
     return YES;
