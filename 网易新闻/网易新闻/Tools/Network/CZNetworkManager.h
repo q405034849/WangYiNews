@@ -12,4 +12,6 @@
 
 + (instancetype)sharedManager;
 
+- (void)newsListWithChannel:(NSString *)channel start:(NSInteger)start completion:(void (^)(NSArray *array, NSError *error))completion;
+
 @end
