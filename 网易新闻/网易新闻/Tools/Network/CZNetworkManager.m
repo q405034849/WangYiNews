@@ -20,6 +20,8 @@
         NSURL *baseURL = [NSURL URLWithString:@"http://c.m.163.com/nc/article/"];
         
         instance = [[self alloc] initWithBaseURL:baseURL];
+        
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     });
     
     return instance;
