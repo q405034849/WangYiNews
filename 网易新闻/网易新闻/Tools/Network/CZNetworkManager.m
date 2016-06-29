@@ -47,7 +47,9 @@
     NSString *urlString = [NSString stringWithFormat:@"list/%@/%zd-20.html", channel, start];
     
     [self GETRequest:urlString parameters:nil completion:^(id json, NSError *error) {
-        NSLog(@"%@", json);
+        NSArray *array = json[channel];
+        
+        completion(array,error);
     }];
 }
 
